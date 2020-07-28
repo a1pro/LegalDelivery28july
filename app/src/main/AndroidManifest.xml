@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aetherti.legaldelivery"
+    android:versionCode="1"
+    android:versionName="1.0.22">
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="Appplication_Version=1.0.11.180701"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".gr.antalakas.android.LegalDelivery.FirstActivity"/>
+        <activity
+            android:name=".gr.antalakas.android.LegalDelivery.ChkFlagEntry"
+            android:launchMode="singleTop"
+            android:theme="@style/my_theme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".gr.antalakas.android.LegalDelivery.LegalDeliveryActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo">
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".gr.antalakas.android.LegalDelivery.Edit.EditActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Register.RegisterDeviceActivity"
+            android:theme="@android:style/Theme.Holo" />
+        <activity
+            android:name=".gr.antalakas.android.LegalDelivery.Download.LDDownloadActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo" />
+        <activity
+            android:name=".gr.antalakas.android.LegalDelivery.Upload.LDUploadActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo" />
+        <activity
+            android:name=".gr.antalakas.android.LegalDelivery.HolidayDownload.HolidayDownloadActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo" />
+        <activity
+            android:name=".gr.antalakas.android.LegalDelivery.BlueScreenDesign"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo" /> <!-- <activity android:name="com.aetherti.legaldelivery.gr.antalakas.android.LegalDelivery.ErrorReporting" /> -->
+        <activity
+            android:name=".gr.antalakas.android.LegalDelivery.QuickPrefsActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo" />
+        <activity android:name=".gr.antalakas.android.LegalDelivery.ShowSettingsActivity" />
+        <activity
+            android:name=".Keyboard.KeyBoardActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".gr.antalakas.android.LegalDelivery.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@android:style/Theme.Holo" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCvHhbGJ0k9jOWvTMKl2PFHyctAqwCX6bY" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <receiver android:name=".gr.antalakas.android.LegalDelivery.BackgroundServices.ServiceRepeatingAlarm" />
+
+        <service android:name=".gr.antalakas.android.LegalDelivery.BackgroundServices.NetworkCheckingService" />
+
+        <uses-library android:name="com.google.android.maps" />
+    </application>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+</manifest>
